@@ -11,9 +11,9 @@ steps:
   args: ['install', '-Dmaven.test.skip=true']
   
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/pg-big-data-poc/gke-poc-dev:$SHORT_SHA', '.']
+  args: ['build', '-t', 'gcr.io/infosys-gcp-demo-project/gke-poc-dev:$SHORT_SHA', '.']
 
 #- name: 'gcr.io/cloud-builders/gcloud'
 #  args: ['app', 'deploy', 'app.yaml', '--image-url', 'gcr.io/concrete-crow-244606/gke-poc']
     
-images: ['gcr.io/pg-big-data-poc/gke-poc-dev:$SHORT_SHA']
+images: ['gcr.io/infosys-gcp-demo-project/gke-poc-dev:$SHORT_SHA']
