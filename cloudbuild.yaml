@@ -1,6 +1,6 @@
 steps:
 
-#- name: 'gcr.io/concrete-crow-244606/sonar-scanner:latest'
+#- name: 'gcr.io/mysampleproject-263912/sonar-scanner:latest'
 #  args:
 #    - '-Dsonar.host.url=http://35.232.7.242:9000'
 #    - '-Dsonar.login=d57ef72497c93fb767e425f5a3d8ecfa6e801287'
@@ -11,9 +11,9 @@ steps:
   args: ['install', '-Dmaven.test.skip=true']
   
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/infosys-gcp-demo-project/gke-poc:$SHORT_SHA', '.']
+  args: ['build', '-t', 'gcr.io/mysampleproject-263912/gke-poc:$SHORT_SHA', '.']
 
 #- name: 'gcr.io/cloud-builders/gcloud'
-#  args: ['app', 'deploy', 'app.yaml', '--image-url', 'gcr.io/concrete-crow-244606/gke-poc']
+#  args: ['app', 'deploy', 'app.yaml', '--image-url', 'gcr.io/mysampleproject-263912/gke-poc']
     
-images: ['gcr.io/infosys-gcp-demo-project/gke-poc:$SHORT_SHA']
+images: ['gcr.io/mysampleproject-263912/gke-poc:$SHORT_SHA']
